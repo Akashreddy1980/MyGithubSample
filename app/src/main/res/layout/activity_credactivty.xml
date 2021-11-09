@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="Model"
+            type="com.aimsmart.app.mygithubsample.Credactivty" />
+    </data>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".Credactivty">
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter Token"
+    android:id="@+id/token"
+    android:padding="10dp"
+    android:layout_centerInParent="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/token"
+        android:text="Submit and Validate"
+        android:onClick="@{()->Model.onclick(token.getText().toString())}"
+        android:background="@color/colorAccent"
+        android:textColor="#000000"/>
+    
+</RelativeLayout>
+</layout>
